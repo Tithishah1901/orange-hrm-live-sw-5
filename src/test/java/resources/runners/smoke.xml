@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke test suite" verbose="1">
+    <listeners>
+        <listener class-name="com.orangehrmlive.demo.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+    </listeners>
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+    <test name="Smoke Test">
+        <classes>
+            <class name="com.orangehrmlive.demo.testsuit.UserTest"/>
+            <class name="com.orangehrmlive.demo.testsuit.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
